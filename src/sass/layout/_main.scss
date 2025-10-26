@@ -52,7 +52,7 @@
                 &:first-child {
                     background-color: v.$black;
 
-                    a {
+                    a, a:visited {
                         padding: 24px 35px 24px 32px;
                         color: v.$white;
                         text-decoration: none;
