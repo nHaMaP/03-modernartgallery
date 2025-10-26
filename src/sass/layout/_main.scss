@@ -18,10 +18,11 @@
     }
 
     .hero {
+
         h1 {
             font-family: v.$heading;
             font-size: 60px;
-            line-height:50px;
+            line-height:55px;
             text-transform: uppercase;
             color: v.$black;
             margin: 32px 16px 10px 16px;
@@ -36,8 +37,8 @@
         }
     
         .btn_1 {
-        position: relative;
-        margin-left: 15px;
+            position: relative;
+            margin-left: 15px;
     
             ul {
                 @include v.reset_ul;
