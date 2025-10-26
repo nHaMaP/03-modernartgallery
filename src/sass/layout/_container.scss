@@ -1,8 +1,12 @@
-
+@use '../abstracts/abstracts' as v;
 
 .container, .location {
     max-width: 360px;;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
+
+    @include v.breakpoint(tablet) {
+        max-width:768px;
+    }
 }

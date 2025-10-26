@@ -8,83 +8,105 @@
     align-items: flex-start;
     margin-bottom: 120px;
 
-    figure {
-        margin: 0;
+    .title_hero {
+        @include v.breakpoint(tablet) {
+            display: flex;
+            flex-direction: row;
+        }
+
+        figure {
+                margin: 0;
+                
+                img {
+                    width: 100%;
+                    margin-bottom: -8px;
+
+                    @include v.breakpoint(tablet) {
+                        width: 120%;
+                    }
+                }
+        }
         
-        img {
-            width: 100%;
-            margin-bottom: -8px;
-        }
-    }
+        .hero_info {
 
-    .hero {
+            @include v.breakpoint(tablet) {
+                height: 410px;
+                position: relative;
+                top: 131px;
+                left: 10px;
+            }
 
-        h1 {
-            font-family: v.$heading;
-            font-size: 60px;
-            line-height:55px;
-            text-transform: uppercase;
-            color: v.$black;
-            margin: 32px 16px 10px 16px;
-        }
-    
-        p {
-            font-family: v.$text;
-            font-size: 18px;
-            line-height:28px;
-            color: v.$grey;
-            margin: 32px 16px 32px 16px;
-        }
-    
-        .btn_1 {
-            position: relative;
-            margin-left: 15px;
-    
-            ul {
-                @include v.reset_ul;
-                display: flex;
-    
-                li {
-                    display: flex;
-                    align-items: center;
-    
-                    &:first-child {
-                        background-color: v.$black;
-    
-                        a, a:visited {
-                            padding: 24px 35px 24px 32px;
-                            color: v.$white;
-                            text-decoration: none;
-                            font-family: v.$btn;
-                            font-size: 18px;
-                            text-transform: uppercase;
-                            letter-spacing: 3.6px;
+        
+                h1 {
+                    font-family: v.$heading;
+                    font-size: 60px;
+                    line-height:55px;
+                    text-transform: uppercase;
+                    color: v.$black;
+                    margin: 32px 16px 10px 16px;
+                }
+            
+                p {
+                    font-family: v.$text;
+                    font-size: 18px;
+                    line-height:28px;
+                    color: v.$grey;
+                    margin: 32px 16px 32px 16px;
+                }
+            
+                .btn_1 {
+                    position: relative;
+                    margin-left: 15px;
+            
+                    ul {
+                        @include v.reset_ul;
+                        display: flex;
+            
+                        li {
+                            display: flex;
+                            align-items: center;
+            
+                            &:first-child {
+                                background-color: v.$black;
+            
+                                a, a:visited {
+                                    padding: 24px 35px 24px 32px;
+                                    color: v.$white;
+                                    text-decoration: none;
+                                    font-family: v.$btn;
+                                    font-size: 18px;
+                                    text-transform: uppercase;
+                                    letter-spacing: 3.6px;
+                                }
+                            }
+            
+                            &:last-child {
+                                background-color: v.$gold;
+            
+                                img {
+                                    padding: 24px;
+                                }
+                            }
+                            
                         }
                     }
-    
-                    &:last-child {
-                        background-color: v.$gold;
-    
-                        img {
-                            padding: 24px;
+            
+                    &:hover {
+                        li:first-child {
+                            background-color: v.$gold;
+                        }
+            
+                        li:last-child {
+                            background-color: v.$black;
                         }
                     }
-                    
                 }
-            }
-    
-            &:hover {
-                li:first-child {
-                    background-color: v.$gold;
-                }
-    
-                li:last-child {
-                    background-color: v.$black;
-                }
-            }
         }
     }
+    
+
 }
+
 
 .location-info {
     .map {
