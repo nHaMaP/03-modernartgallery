@@ -52,6 +52,26 @@
             width: 100%;
         }
     }
+
+    .cta {
+        background-color: v.$black;
+        margin-bottom: 120px;
+        h2 {
+            font-family: v.$heading;
+            font-size: 50px;
+            line-height: 45px;
+            color: v.$white;
+            margin: 48px 24px 24px 24px;
+        }
+
+        p {
+            font-family: v.$text;
+            font-size: 18px;
+            line-height: 28px;
+            color: v.$white;
+            margin: 0 24px 47px 24px;
+        }
+    }
 }
 
 

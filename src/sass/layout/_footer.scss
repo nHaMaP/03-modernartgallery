@@ -1,11 +1,51 @@
-
-
-
+@use '../abstracts/abstracts' as v;
 
 
 
 
 
 footer {
-    visibility: hidden;
+    background-color: v.$black;
+    
+    height: 316px;
+
+    figure {
+        margin: 0;
+        width: 375px;
+
+        img {
+            width: 110.05px;
+            height: 40px;
+            margin-top: 48px;
+            margin-bottom: 38px;
+            margin-left: 32px;
+            color: v.$white;
+        }
+    }
+
+    p {
+        font-family: v.$text;
+        font-size: 12px;
+        line-height: 26px;
+        color:v.$white;
+        margin: 0 32px 38px 32px;
+    }
+
+    .social-media {
+
+        ul {
+            @include v.reset_ul;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 0 0 48px 32px;
+        
+            li:hover {
+                transform: scale(1.2);
+                transition: 0.5s ease-in;
+            }
+        
+        }
+    }
+
 }
