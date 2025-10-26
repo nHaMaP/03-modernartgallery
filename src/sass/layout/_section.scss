@@ -1,7 +1,57 @@
-
+@use '../abstracts/abstracts' as v;
 
 .offer {
-    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    .head-section {
+        margin: 0;
+        width: 343px;
+        overflow-block: hidden;
+        margin-bottom: 25px;
+
+        img {
+            width: 133%;
+            object-fit: contain;
+            object-position: -57px;
+        }
+    }
+
+    h2 {
+        font-family: v.$heading;
+        font-size: 50px;
+        line-height: 45px;
+        color: v.$black;
+        text-transform: uppercase;
+        margin: 0 16px 21px 16px;
+    }
+
+    p {
+        font-family: v.$text;
+        font-size: 18px;
+        line-height: 28px;
+        color: v.$grey;
+        margin:0 16px 32px 16px;
+    }
+
+    .examples {
+
+        margin: 0;
+        width: 343px;
+        overflow-block: hidden;
+        margin-bottom: 16px;
+
+        img:first-child {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        img:last-child {
+            width: 100%;
+        }
+    }
 }
 
 
