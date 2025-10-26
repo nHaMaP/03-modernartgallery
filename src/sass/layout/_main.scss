@@ -17,74 +17,131 @@
         }
     }
 
-
-    h1 {
-        font-family: v.$heading;
-        font-size: 60px;
-        line-height:50px;
-        text-transform: uppercase;
-        color: v.$black;
-        margin: 32px 16px 10px 16px;
-    }
-
-    p {
-        font-family: v.$text;
-        font-size: 18px;
-        line-height:28px;
-        color: v.$grey;
-        margin: 32px 16px 32px 16px;
-    }
-
-    .btn_1 {
-    position: relative;
-    margin-left: 15px;
-
-        ul {
-            @include v.reset_ul;
-            display: flex;
-
-            li {
-                display: flex;
-                align-items: center;
-
-                &:first-child {
-                    background-color: v.$black;
-
-                    a, a:visited {
-                        padding: 24px 35px 24px 32px;
-                        color: v.$white;
-                        text-decoration: none;
-                        font-family: v.$btn;
-                        font-size: 18px;
-                        text-transform: uppercase;
-                        letter-spacing: 3.6px;
-                    }
-                }
-
-                &:last-child {
-                    background-color: v.$gold;
-
-                    img {
-                        padding: 24px;
-                    }
-                }
-                
-            }
+    .hero {
+        h1 {
+            font-family: v.$heading;
+            font-size: 60px;
+            line-height:50px;
+            text-transform: uppercase;
+            color: v.$black;
+            margin: 32px 16px 10px 16px;
         }
-
-        &:hover {
-            li:first-child {
-                background-color: v.$gold;
+    
+        p {
+            font-family: v.$text;
+            font-size: 18px;
+            line-height:28px;
+            color: v.$grey;
+            margin: 32px 16px 32px 16px;
+        }
+    
+        .btn_1 {
+        position: relative;
+        margin-left: 15px;
+    
+            ul {
+                @include v.reset_ul;
+                display: flex;
+    
+                li {
+                    display: flex;
+                    align-items: center;
+    
+                    &:first-child {
+                        background-color: v.$black;
+    
+                        a, a:visited {
+                            padding: 24px 35px 24px 32px;
+                            color: v.$white;
+                            text-decoration: none;
+                            font-family: v.$btn;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            letter-spacing: 3.6px;
+                        }
+                    }
+    
+                    &:last-child {
+                        background-color: v.$gold;
+    
+                        img {
+                            padding: 24px;
+                        }
+                    }
+                    
+                }
             }
-
-            li:last-child {
-                background-color: v.$black;
+    
+            &:hover {
+                li:first-child {
+                    background-color: v.$gold;
+                }
+    
+                li:last-child {
+                    background-color: v.$black;
+                }
             }
         }
     }
 }
 
+.location-info {
+    .map {
+        margin: 0;
+        width: 100%;
+        overflow-block:hidden;
 
+        img {
+            width: 303%;
+            position: relative;
+            left: -340px;
+            top: 0px;
+            margin-bottom: 0;
+        }
+    }
+
+    .info {
+        margin: 0;
+        height: 493px;
+        background-color: v.$black;
+                
+        h1 {
+            margin: 0 16px 48px 16px;
+            padding-top: 48px;
+            font-family: v.$heading;
+            font-size: 50px;
+            line-height: 45px;
+            color: v.$white;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            margin: 0 16px 20px 16px;
+            font-family: v.$heading;
+            font-size: 32px;
+            line-height: 32px;
+            color: v.$gold;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: v.$text;
+            font-size: 14px;
+            line-height: 28px;
+            color: v.$white;
+            
+            &:nth-last-child(2) {
+                margin: 0 16px 20px 16px;
+            }
+
+            &:last-child {
+                margin: 0 16px 56px 16px;
+            }
+        }
+
+    }
+
+}
 
 
 

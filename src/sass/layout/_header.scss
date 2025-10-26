@@ -1,0 +1,55 @@
+@use '../abstracts/abstracts' as v;
+
+.location {
+    header {
+        position: absolute;
+        z-index: 1;
+        nav{
+            display: flex;
+            
+            ul {
+                @include v.reset_ul;
+                display: flex;
+                flex-direction: row-reverse;
+
+                li {
+                    display: flex;
+                    align-items: center;
+
+                    &:first-child {
+                        background-color: v.$black;
+
+                        a, a:visited {
+                            padding: 24px 35px 24px 32px;
+                            color: v.$white;
+                            text-decoration: none;
+                            font-family: v.$btn;
+                            font-size: 18px;
+                            text-transform: uppercase;
+                            letter-spacing: 3.6px;
+                        }
+                    }
+
+                    &:last-child {
+                        background-color: v.$gold;
+
+                        img {
+                            padding: 24px;
+                        }
+                    }
+                }
+            
+            }
+
+            &:hover {
+                li:first-child {
+                    background-color: v.$gold;
+                }
+
+                li:last-child {
+                    background-color: v.$black;
+                }
+            }
+        }
+    }
+}

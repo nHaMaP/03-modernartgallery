@@ -2,8 +2,6 @@
 
 
 
-
-
 footer {
     background-color: v.$black;
     
@@ -11,7 +9,7 @@ footer {
 
     figure {
         margin: 0;
-        width: 375px;
+        width: 360px;
 
         img {
             width: 110.05px;
@@ -25,7 +23,7 @@ footer {
 
     p {
         font-family: v.$text;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 26px;
         color:v.$white;
         margin: 0 32px 38px 32px;
@@ -48,4 +46,31 @@ footer {
         }
     }
 
+}
+
+footer.f-location {
+    background-color: v.$gold;
+
+    figure {
+        img {
+            filter: invert(1);
+        }
+    }
+
+    p {
+        font-size: 14px;
+        color: v.$black;
+    }
+
+    .social-media {
+        ul {
+            li {
+                a {
+                    img {
+                        filter: invert(1);            
+                    }
+                }  
+            }
+        }
+    }
 }
