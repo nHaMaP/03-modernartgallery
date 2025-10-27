@@ -17,6 +17,8 @@
             display: grid;
             grid-template-columns: 285px auto;
             grid-template-rows: 355px auto;
+            position: relative;
+            left: 50px;
         }
 
         @include v.breakpoint(desktopS){
@@ -106,6 +108,10 @@
                 "example1 flexi";
             column-gap: 11px;
       
+        }
+
+        @include v.breakpoint(tablet){
+            margin-left: 10px;
         }
 
         @include v.breakpoint(desktopS){
@@ -220,11 +226,15 @@
                     text-transform: uppercase;
 
                     @include v.breakpoint(tablet){
-                        padding-top: 50px;
+                        position: relative;
+                        top: 60px;
                     }
 
                     @include v.breakpoint(desktopS){
-                        padding-top: 0px;
+                        font-size: 60px;
+                        line-height: 60px;
+                        position: relative;
+                        top: -5px;
                     }
                 }
         
@@ -237,10 +247,13 @@
 
                     @include v.breakpoint(tablet){
                         width: 225px;
+                        position: relative;
+                        top: 75px;
                     }
 
                     @include v.breakpoint(desktopS){
                         width: 290px;
+                        top: 10px;
                     }
                 }
     

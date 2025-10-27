@@ -8,14 +8,20 @@
     align-items: flex-start;
     margin-bottom: 120px;
 
+    @include v.breakpoint(desktopS){
+        flex-direction: row;
+        position: relative;
+        left: 15px;
+    }
+
     .title_hero {
 
         .empty-bg {
 
             @include v.breakpoint(desktopS) {
-                width: 58.8%;
-                height: 550px;
-                background-color: v.$black;
+                width: 330px;
+                height: 650px;
+                background-color: #151515;
             }
         }
 
@@ -28,20 +34,21 @@
         
 
         figure {
-                margin: 0;
                 
-                img {
-                    width: 100%;
-                    margin-bottom: -8px;
+            margin: 0;
+                
+            img {
+                width: 100%;
+                margin-bottom: -8px;
 
-                    @include v.breakpoint(tablet) {
-                        width: 120%;
-                    }
-
-                    @include v.breakpoint(desktopS) {
-                        width: 82.7%;
-                    }
+                @include v.breakpoint(tablet) {
+                    width: 124.89%;
                 }
+
+                @include v.breakpoint(desktopS) {
+                    width: 439px;
+                }
+            }
         }
         
         .hero_info {
@@ -61,12 +68,23 @@
                     color: v.$black;
                     margin: 32px 16px 10px 16px;
 
+                    @include v.breakpoint(tablet) {
+                        font-size: 70px;
+                        line-height: 65px;
+                        width: 329px;
+                        position: relative;
+                        right: -20px;
+                    }
+
                     @include v.breakpoint (desktopS) {
-                        filter:invert(1);
-                        width: 282px;
+                       font-size: 96px;
+                        line-height: 88px;
+                        filter: invert(1);
+                        width: 450px;
                         height: 176px;
                         position: relative;
-                        right: 653px;
+                        right: 752px;
+
                     }
                 }
             
@@ -77,11 +95,18 @@
                     color: v.$grey;
                     margin: 32px 16px 32px 16px;
 
+                    @include v.breakpoint(tablet){
+                        position: relative;
+                        top: 5px;
+                        right: -20px;
+                        width: 357px;
+                    }
+
                     @include v.breakpoint(desktopS) {
                         width: 293px;
                         position: relative;
-                        right: 158px;
-                        bottom: 266px;
+                        right: 80px;
+                        top: -220px;
                     }
                 }
             
@@ -89,9 +114,14 @@
                     position: relative;
                     margin-left: 15px;
 
+                    @include v.breakpoint(tablet){
+                        left:20px;
+                        top: 15px;
+                    }
+
                     @include v.breakpoint(desktopS) {
-                        right: 155px;
-                        bottom: 255px;
+                        left: -80px;
+                        top: -205px;
                         width: 215px;
                     }
             

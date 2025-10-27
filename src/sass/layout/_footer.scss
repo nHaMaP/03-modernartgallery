@@ -8,7 +8,14 @@ footer {
 
     @include v.breakpoint(tablet){
         height: 260px;
+        width: 768px;
     }
+
+    @include v.breakpoint(desktopS){
+        width: 1024px;
+    }
+
+    
 
 
     .foot_ads {
