@@ -19,12 +19,13 @@
             grid-template-rows: 355px auto;
         }
           
-        figure {
-            margin-left: 0;
-            margin-right: 0;
+        .gallery {
+            margin: 0;
             @include v.breakpoint(tablet){
                 order:1;
                 overflow-block:hidden;
+                position: relative;
+                right: 20px;
             }
             img {
                 width: 133%;
@@ -76,7 +77,7 @@
             position: relative;
 
             grid-template-columns: auto 280px;
-            grid-template-rows: auto 1139.88px;
+            grid-template-rows: 120px;
             grid-template-areas: 
                 "example1 flexi"
                 "example1 flexi";
@@ -84,27 +85,28 @@
       
         }
 
-        figure {
-            
+        .gallery2 {
+            margin: 0;
+
             @include v.breakpoint(tablet){
                 margin-left: 10px;
                 margin-right: 0;
                 margin-top: 0;
                 overflow-block:hidden;
-                height: 661px;
+                height: 760px;
                 width: 430px;
             }
             img {
                 margin-bottom: 16px;
-                overflow-block: hidden;
                 
                 &:first-child {
                     width: 360px;
     
                     @include v.breakpoint(tablet){
-                        width: 500px;
+                        width: 130%;
                         position: relative;
-                        right: 51px;
+                        right: 65px;
+                        bottom: 0px;
                     }
                 }
             }
@@ -117,16 +119,30 @@
             gap: 11px;   
 
             @include v.breakpoint(tablet){
-                
-                right: 79px;
+
             }
 
-            img.example2 {
-                width: 280px;
-                height:300px;
-                @include v.breakpoint(tablet){
-                    object-fit:cover;
-                }   
+            .gallery3 {
+                margin: 0;
+                overflow-block:hidden;
+
+                @include v.breakpoint(tablet) {
+                    width: 280px;
+                }
+
+                img.example2 {
+                    object-fit: contain;
+                    width: 100%;
+                    
+                    @include v.breakpoint(tablet){
+
+                        object-fit: contain;
+                        position: relative;
+                        width: 150%;
+                        right: 102px;
+                    }   
+                }
+            
             }
                       
             .cta {
@@ -136,7 +152,7 @@
         
                 @include v.breakpoint(tablet){
                     width: 280px;
-                    height: 396px;
+                    height: 402px;
                 }
         
         
@@ -149,7 +165,7 @@
                     text-transform: uppercase;
 
                     @include v.breakpoint(tablet){
-                        
+                        padding-top: 50px;
                     }
                 }
         

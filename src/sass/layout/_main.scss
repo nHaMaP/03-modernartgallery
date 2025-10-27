@@ -118,6 +118,11 @@
             left: -340px;
             top: 0px;
             margin-bottom: 0;
+
+            @include v.breakpoint(tablet){
+                width: 180%;
+                left: -300px;
+            }
         }
     }
 
@@ -125,6 +130,14 @@
         margin: 0;
         height: 493px;
         background-color: v.$black;
+
+        @include v.breakpoint(tablet) {
+            display: flex;
+            flex-direction: row;
+            column-gap:50px;
+            padding: 80px 40px;
+            height: 250px;
+        }
                 
         h1 {
             margin: 0 16px 48px 16px;
@@ -134,31 +147,46 @@
             line-height: 45px;
             color: v.$white;
             text-transform: uppercase;
+
+            @include v.breakpoint(tablet) {
+                padding: 0;
+            }
         }
 
-        h2 {
-            margin: 0 16px 20px 16px;
-            font-family: v.$heading;
-            font-size: 32px;
-            line-height: 32px;
-            color: v.$gold;
-            text-transform: uppercase;
-        }
+        .address {
 
-        p {
-            font-family: v.$text;
-            font-size: 14px;
-            line-height: 28px;
-            color: v.$white;
-            
-            &:nth-last-child(2) {
+            @include v.breakpoint(tablet) {
+                width: 350px;
+                position: relative;
+                right: 50px;
+            }
+
+            h2 {
                 margin: 0 16px 20px 16px;
+                font-family: v.$heading;
+                font-size: 32px;
+                line-height: 32px;
+                color: v.$gold;
+                text-transform: uppercase;
+            }
+    
+            p {
+                font-family: v.$text;
+                font-size: 14px;
+                line-height: 28px;
+                color: v.$white;
+                
+                &:nth-last-child(2) {
+                    margin: 0 16px 20px 16px;
+                }
+    
+                &:last-child {
+                    margin: 0 16px 56px 16px;
+                }
             }
 
-            &:last-child {
-                margin: 0 16px 56px 16px;
-            }
         }
+
 
     }
 

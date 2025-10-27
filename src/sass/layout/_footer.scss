@@ -51,26 +51,48 @@ footer {
 footer.f-location {
     background-color: v.$gold;
 
-    figure {
-        img {
-            filter: invert(1);
+    .foot_add {
+
+        @include v.breakpoint(tablet){
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            position: relative;
+            top: 100px;
+            padding: 0 40px 0 40px;
         }
-    }
-
-    p {
-        font-size: 14px;
-        color: v.$black;
-    }
-
-    .social-media {
-        ul {
-            li {
-                a {
-                    img {
-                        filter: invert(1);            
-                    }
-                }  
+    
+        figure {
+            img {
+                filter: invert(1);
+    
+                @include v.breakpoint(tablet) {
+                    margin: 0;
+                }
+            }
+        }
+    
+        p {
+            font-size: 14px;
+            color: v.$black;
+    
+            @include v.breakpoint(tablet) {
+                font-size:18px;
+                padding-left: 36px;
+            }
+        }
+    
+        .social-media {
+            ul {
+                li {
+                    a {
+                        img {
+                            filter: invert(1);            
+                        }
+                    }  
+                }
             }
         }
     }
+
 }
