@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "sass-embedded": "^1.93.2",
     "vite": "^7.1.11"
   }
