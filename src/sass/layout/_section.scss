@@ -5,12 +5,27 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include v.breakpoint(tablet) {
+        display: grid;
+            grid-template-columns: 33.3% 33.3% auto;
+            grid-template-rows: 400px 313px 396px;
+            grid-template-areas: 
+                "cont gall gall"
+                "ex1 ex1 ex2"
+                "ex1 ex1 cta";
+    
+    }
     
     .head-section {
         margin: 0;
         width: 350px;
         overflow-block: hidden;
         margin-bottom: 25px;
+
+        @include v.breakpoint(tablet) {
+            grid-area: gall;
+        }
 
         img {
             width: 133%;
@@ -19,56 +34,69 @@
         }
     }
 
-    h2 {
-        font-family: v.$heading;
-        font-size: 50px;
-        line-height: 45px;
-        color: v.$black;
-        text-transform: uppercase;
-        margin: 0 16px 21px 16px;
-    }
-
-    p {
-        font-family: v.$text;
-        font-size: 18px;
-        line-height: 28px;
-        color: v.$grey;
-        margin:0 16px 32px 16px;
-    }
-
-    .examples {
-
-        margin: 0;
-        width: 343px;
-        overflow-block: hidden;
-        margin-bottom: 16px;
-
-        img:first-child {
-            width: 100%;
-            margin-bottom: 16px;
+    .offer_content {
+        @include v.breakpoint(tablet) {
+            grid-area: cont;
         }
-
-        img:last-child {
-            width: 100%;
-        }
-    }
-
-    .cta {
-        background-color: v.$black;
-        margin-bottom: 120px;
         h2 {
             font-family: v.$heading;
             font-size: 50px;
             line-height: 45px;
-            color: v.$white;
-            margin: 48px 24px 24px 24px;
+            color: v.$black;
+            text-transform: uppercase;
+            margin: 0 16px 21px 16px;
         }
-
+    
         p {
             font-family: v.$text;
             font-size: 18px;
             line-height: 28px;
-            color: v.$white;
+            color: v.$grey;
+            margin:0 16px 32px 16px;
+        }
+    }
+
+
+      
+    img {
+        max-width: 360px;
+        margin-bottom: 16px;
+        overflow-block: hidden;
+
+        &:first-child {                
+            @include v.breakpoint(tablet){
+                grid-area: ex1;
+            }
+        }
+
+        &:last-child {
+            @include v.breakpoint(tablet) {
+                grid-area:ex2;
+            }
+        }      
+    }
+
+        
+       
+
+    .cta {
+        background-color: #151515;
+        margin-bottom: 120px;
+
+        h2 {
+            font-family: "Big Shoulders Display", sans-serif;
+            font-size: 50px;
+            line-height: 45px;
+            color: #FFFFFF;
+            margin: 48px 24px 24px 24px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-family: "Outfit", sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            color: #FFFFFF;
             margin: 0 24px 47px 24px;
         }
     }
