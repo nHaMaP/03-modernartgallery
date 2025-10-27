@@ -6,99 +6,167 @@
     flex-direction: column;
     align-items: flex-start;
 
-    @include v.breakpoint(tablet) {
-        display: grid;
-            grid-template-columns: 33.3% 33.3% auto;
-            grid-template-rows: 400px 313px 396px;
-            grid-template-areas: 
-                "cont gall gall"
-                "ex1 ex1 ex2"
-                "ex1 ex1 cta";
-    
-    }
-    
-    .head-section {
+    .offer_article {
+      
         margin: 0;
-        width: 350px;
+        width: 100%;
         overflow-block: hidden;
         margin-bottom: 25px;
 
         @include v.breakpoint(tablet) {
-            grid-area: gall;
+            display: grid;
+            grid-template-columns: 285px auto;
+            grid-template-rows: 355px auto;
         }
-
-        img {
-            width: 133%;
-            object-fit: contain;
-            object-position: -57px;
-        }
-    }
-
-    .offer_content {
-        @include v.breakpoint(tablet) {
-            grid-area: cont;
-        }
-        h2 {
-            font-family: v.$heading;
-            font-size: 50px;
-            line-height: 45px;
-            color: v.$black;
-            text-transform: uppercase;
-            margin: 0 16px 21px 16px;
-        }
-    
-        p {
-            font-family: v.$text;
-            font-size: 18px;
-            line-height: 28px;
-            color: v.$grey;
-            margin:0 16px 32px 16px;
-        }
-    }
-
-
-      
-    img {
-        max-width: 360px;
-        margin-bottom: 16px;
-        overflow-block: hidden;
-
-        &:first-child {                
+          
+        figure {
+            margin-left: 0;
+            margin-right: 0;
             @include v.breakpoint(tablet){
-                grid-area: ex1;
+                order:1;
+                overflow-block:hidden;
             }
-        }
-
-        &:last-child {
-            @include v.breakpoint(tablet) {
-                grid-area:ex2;
+            img {
+                width: 133%;
+                object-position: -57px;
+                margin-bottom: 25px;
+                @include v.breakpoint(tablet) {
+                    width: 590px;
+                    height: 450px;
+                    position: relative;
+                    object-fit: fill;
+                    bottom: 67px;
+                    right: 45px;
+                }
             }
-        }      
-    }
+        }    
+        .offer_content {
 
+            @include v.breakpoint(tablet){
+                width: 270px;
+                min-height: 328px;
+                margin-top: 36px;
+                margin-left: 4px;
+            }
+                
+            h2 {
+                font-family: v.$heading;
+                font-size: 50px;
+                line-height: 45px;
+                color: v.$black;
+                text-transform: uppercase;
+                margin: 0 16px 21px 16px;
+            }
         
-       
+            p {
+                font-family: v.$text;
+                font-size: 18px;
+                line-height: 28px;
+                color: v.$grey;
+                margin:0 16px 32px 16px;
+            }
+        }
+    }
+    
+    .grid {
 
-    .cta {
-        background-color: #151515;
-        margin-bottom: 120px;
+        @include v.breakpoint(tablet) {
 
-        h2 {
-            font-family: "Big Shoulders Display", sans-serif;
-            font-size: 50px;
-            line-height: 45px;
-            color: #FFFFFF;
-            margin: 48px 24px 24px 24px;
-            text-transform: uppercase;
+            display: grid;
+            position: relative;
+
+            grid-template-columns: auto 280px;
+            grid-template-rows: auto 1139.88px;
+            grid-template-areas: 
+                "example1 flexi"
+                "example1 flexi";
+            column-gap: 11px;
+      
         }
 
-        p {
-            font-family: "Outfit", sans-serif;
-            font-size: 18px;
-            line-height: 28px;
-            color: #FFFFFF;
-            margin: 0 24px 47px 24px;
+        figure {
+            
+            @include v.breakpoint(tablet){
+                margin-left: 10px;
+                margin-right: 0;
+                margin-top: 0;
+                overflow-block:hidden;
+                height: 661px;
+                width: 430px;
+            }
+            img {
+                margin-bottom: 16px;
+                overflow-block: hidden;
+                
+                &:first-child {
+                    width: 360px;
+    
+                    @include v.breakpoint(tablet){
+                        width: 500px;
+                        position: relative;
+                        right: 51px;
+                    }
+                }
+            }
         }
+
+        .flexgrid {
+            grid-area:flexi;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;   
+
+            @include v.breakpoint(tablet){
+                
+                right: 79px;
+            }
+
+            img.example2 {
+                width: 280px;
+                height:300px;
+                @include v.breakpoint(tablet){
+                    object-fit:cover;
+                }   
+            }
+                      
+            .cta {
+                background-color: #151515;
+                margin-bottom: 120px;
+                padding: 24px 0 24px 0;
+        
+                @include v.breakpoint(tablet){
+                    width: 280px;
+                    height: 396px;
+                }
+        
+        
+                h2 {
+                    font-family: "Big Shoulders Display", sans-serif;
+                    font-size: 50px;
+                    line-height: 45px;
+                    color: #FFFFFF;
+                    margin: 48px 24px 24px 24px;
+                    text-transform: uppercase;
+
+                    @include v.breakpoint(tablet){
+                        
+                    }
+                }
+        
+                p {
+                    font-family: "Outfit", sans-serif;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                    margin: 0 24px 47px 24px;
+
+                    @include v.breakpoint(tablet){
+                        width: 225px;
+                    }
+                }
+    
+            }
+       }
     }
 }
 
