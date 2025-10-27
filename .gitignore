@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-# Prevents creating module when deploying gh-pages
+# GH-PAGES - Prevents creating module when deploying gh-pages
 node_modules/.cache/gh-pages 
 
 # Editor directories and files
