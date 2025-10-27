@@ -9,10 +9,23 @@
     margin-bottom: 120px;
 
     .title_hero {
+
+        .empty-bg {
+
+            @include v.breakpoint(desktopS) {
+                width: 58.8%;
+                height: 550px;
+                background-color: v.$black;
+            }
+        }
+
+
         @include v.breakpoint(tablet) {
             display: flex;
             flex-direction: row;
         }
+
+        
 
         figure {
                 margin: 0;
@@ -23,6 +36,10 @@
 
                     @include v.breakpoint(tablet) {
                         width: 120%;
+                    }
+
+                    @include v.breakpoint(desktopS) {
+                        width: 82.7%;
                     }
                 }
         }
@@ -35,7 +52,6 @@
                 top: 131px;
                 left: 10px;
             }
-
         
                 h1 {
                     font-family: v.$heading;
@@ -44,6 +60,14 @@
                     text-transform: uppercase;
                     color: v.$black;
                     margin: 32px 16px 10px 16px;
+
+                    @include v.breakpoint (desktopS) {
+                        filter:invert(1);
+                        width: 282px;
+                        height: 176px;
+                        position: relative;
+                        right: 653px;
+                    }
                 }
             
                 p {
@@ -52,15 +76,32 @@
                     line-height:28px;
                     color: v.$grey;
                     margin: 32px 16px 32px 16px;
+
+                    @include v.breakpoint(desktopS) {
+                        width: 293px;
+                        position: relative;
+                        right: 158px;
+                        bottom: 266px;
+                    }
                 }
             
                 .btn_1 {
                     position: relative;
                     margin-left: 15px;
+
+                    @include v.breakpoint(desktopS) {
+                        right: 155px;
+                        bottom: 255px;
+                        width: 215px;
+                    }
             
                     ul {
                         @include v.reset_ul;
                         display: flex;
+
+                        @include v.breakpoint(desktopS) {
+                            height: 55px;
+                        }
             
                         li {
                             display: flex;
@@ -77,6 +118,11 @@
                                     font-size: 18px;
                                     text-transform: uppercase;
                                     letter-spacing: 3.6px;
+
+                                    @include v.breakpoint(desktopS){
+                                        font-size: 16px;
+                                        padding: 12px 15px;
+                                    }
                                 }
                             }
             
@@ -123,6 +169,11 @@
                 width: 180%;
                 left: -300px;
             }
+
+            @include v.breakpoint(desktopS){
+                width: 100%;
+                left: 0;
+            }
         }
     }
 
@@ -134,9 +185,14 @@
         @include v.breakpoint(tablet) {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             column-gap:50px;
             padding: 80px 40px;
             height: 250px;
+        }
+
+        @include v.breakpoint(desktopS){
+            margin-top: -10px;
         }
                 
         h1 {
@@ -151,6 +207,12 @@
             @include v.breakpoint(tablet) {
                 padding: 0;
             }
+
+            @include v.breakpoint(desktopS){
+                width: 180px;
+                position: relative;
+                left: 50px;
+            }
         }
 
         .address {
@@ -158,7 +220,7 @@
             @include v.breakpoint(tablet) {
                 width: 350px;
                 position: relative;
-                right: 50px;
+                right: 110px;
             }
 
             h2 {
@@ -182,6 +244,10 @@
     
                 &:last-child {
                     margin: 0 16px 56px 16px;
+
+                    @include v.breakpoint(desktopS) {
+                        width: 340px;
+                    }
                 }
             }
 

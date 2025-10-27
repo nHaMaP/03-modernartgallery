@@ -9,20 +9,20 @@
     }
   }
 
-  @if $bp == tablethorizontal {
-    @media (min-width: v.$bp-tablet-horizontal) {
+  @if $bp == desktopS {
+    @media (min-width: v.$bp-desktopS) {
       @content;
     }
   }
 
-  @if $bp == desktop {
-    @media (min-width: v.$bp-desktop) {
+  @if $bp == desktopM {
+    @media (min-width: v.$bp-desktopL) {
       @content;
     }
   }
 
-  @if $bp == desktopxl {
-    @media (min-width: v.$bp-desktop-xl) {
+  @if $bp == desktopL {
+    @media (min-width: v.$bp-desktopL) {
       @content;
     }
   }
