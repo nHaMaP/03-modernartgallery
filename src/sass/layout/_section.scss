@@ -12,13 +12,16 @@
         width: 100%;
         overflow-block: hidden;
         margin-bottom: 25px;
+        overflow-x:hidden;
 
         @include v.breakpoint(tablet) {
             display: grid;
-            grid-template-columns: 285px auto;
+            grid-template-columns: 205px auto;
             grid-template-rows: 355px auto;
             position: relative;
-            left: 50px;
+            left: 30px;
+            column-gap: 70px;
+
         }
 
         @include v.breakpoint(desktopS){
@@ -30,10 +33,11 @@
         .gallery {
             margin: 0;
             @include v.breakpoint(tablet){
-                order:1;
-                overflow-block:hidden;
+                order: 1;
+                overflow-block: hidden;
                 position: relative;
-                right: 20px;
+                right: 0px;
+                width: 100%;
             }
 
             @include v.breakpoint(desktopS){
@@ -45,12 +49,12 @@
                 object-position: -57px;
                 margin-bottom: 25px;
                 @include v.breakpoint(tablet) {
-                    width: 590px;
-                    height: 450px;
+                    width: 100%;
+                    /* height: 450px; */
                     position: relative;
-                    object-fit: fill;
-                    bottom: 67px;
-                    right: 45px;
+                    object-fit: contain;
+                    bottom: 0;
+                    right: 0px;
                 }
 
                 @include v.breakpoint(desktopS){
@@ -130,11 +134,13 @@
                 overflow-block:hidden;
                 height: 760px;
                 width: 430px;
+                overflow-x:hidden;
             }
 
             @include v.breakpoint(desktopS){
                 width: 401px;
                 height: 655px;
+                overflow-x:hidden;
             }
             img {
                 margin-bottom: 16px;
@@ -173,6 +179,7 @@
 
                 @include v.breakpoint(tablet) {
                     width: 280px;
+                    overflow-x:hidden;
                 }
 
                 @include v.breakpoint(desktopS){
